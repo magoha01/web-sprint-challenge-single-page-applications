@@ -5,24 +5,14 @@ export default function PizzaForm(){
     return (
 
         <div className='form-container'>
+
+            <h2>Build Your Own Pizza</h2>
             <form id = 'pizza-form'>
 
-                <label>Name:
+                <label>Order For:
                     <input
                         id='name-input'
                         name='name'
-                        type='text'
-                        placeholder="Name"
-                        minLength='2'
-                        // value={values.first_name}
-                        // onChange={change}
-                    />
-                </label>
-
-                <label>Special Instructions:
-                    <input
-                        id='special-text'
-                        name='first_name'
                         type='text'
                         placeholder="Name"
                         minLength='2'
@@ -68,7 +58,7 @@ export default function PizzaForm(){
                 <label>Extra Cheese
                 <input
                     type='checkbox'
-                    name='coding'
+                    name='extraCheese'
                     // checked={values.coding}
                     // onChange={onChange}
                 />
@@ -77,11 +67,24 @@ export default function PizzaForm(){
                 <label>Three Cheese
                     <input
                         type='checkbox'
-                        name='three cheese'
+                        name='threeCheese'
                         // checked={values.coding}
                         // onChange={onChange}
                     />
                 </label>
+
+                <label>Special Instructions:
+                    <input
+                        id='special-text'
+                        name='special'
+                        type='text'
+                        placeholder="Name"
+                        // minLength='2'
+                        // value={values.first_name}
+                        // onChange={change}
+                    />
+                </label>
+
             </form>
             <button id='order-button'>Add to Order</button>
         </div>
