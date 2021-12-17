@@ -12,10 +12,12 @@ const pizzaRoute = () => {
 
 return (
     <div className='home-container'>
-      <img
-        src='Assets/Pizza.jpg'
+      <div>
+        <img
+        src="/Assets/Pizza.jpg"
         alt=''
-      />
+      /></div>
+      
       <button
         onClick={pizzaRoute}
         id='order-pizza'

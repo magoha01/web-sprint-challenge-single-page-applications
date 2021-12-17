@@ -11,8 +11,8 @@ const pizzaSchema = yup.object().shape({
 
     size: yup
     .string()
-    .oneOf(['small', 'medium', 'large', 'extra-large'], 'Size is required!'),
-
+    .oneOf(['small', 'medium', 'large', 'extra-large'], 'Size is required!')
+    .required('Size is required'),
 
     pepperoni: yup.boolean(),
     sausage: yup.boolean(),

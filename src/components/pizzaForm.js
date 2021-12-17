@@ -4,7 +4,7 @@ import React from 'react'
 
 export default function PizzaForm(props){
 
-    const { values, change, submit, errors } = props
+    const { values, change, submit, errors, disabled } = props
 
     const onSubmit = event => {
         event.preventDefault()
@@ -24,7 +24,7 @@ export default function PizzaForm(props){
 
             <form id = 'pizza-form' onSubmit={onSubmit}>
 
-                {/* <div>{errors.name}</div> */}
+                <div>{errors.size}</div>
 
                 <label>Order For:
                 <div>{errors.name}</div>
@@ -105,9 +105,11 @@ export default function PizzaForm(props){
                 </label>
 
             </form>
-            <button id='order-button'>Submit Order</button>
+            <button id='order-button' disabled={disabled}>Submit Order</button>
         </div>
        
     )
     
 }
+
+// disabled={disabled}

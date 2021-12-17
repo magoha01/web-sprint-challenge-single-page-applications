@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import * as yup from 'yup'
 import axios from 'axios'
 import schema from '../validation/pizzaSchema';
@@ -28,12 +28,14 @@ const initialFormValues = {
   }
 
   const initialOrders= [];
+  const disableSubmit= true;
 
   export default function Order(){
 
     const [orders, setOrders] = useState(initialOrders);
     const [formValues, setFormValues] = useState(initialFormValues);
-    const [errors, setErrors] = useState(initialErrors)
+    const [errors, setErrors] = useState(initialErrors);
+    const [disabled, setDisabled] = useState(disableSubmit);
 
     //SENDS POST FOR COMPLETED ORDER
     const postOrder = newOrder => { 
@@ -71,6 +73,10 @@ const initialFormValues = {
         postOrder(newOrder);
       }
 
+      useEffect(() => {
+        schema.isValid(formValues).then(valid => setDisabled(!valid))
+      }, [formValues])
+
       return (
         <div className='order-container'>
             <header><h1>Build Your Own Pizza</h1></header>
@@ -78,6 +84,7 @@ const initialFormValues = {
                      values={formValues}
                      change={updateForm}
                      submit={submitForm}
+                     disabled={disabled}
                      errors={errors}
                 />
 

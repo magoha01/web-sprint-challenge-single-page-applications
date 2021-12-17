@@ -11,6 +11,7 @@ const App = () => {
     <>
     <header>
       <h1>Bloom Bites</h1>
+      <h3> Never code hungry.</h3>
         <nav>
             <Link to="/">Home</Link>
             <Link to="/pizza">Order</Link>
