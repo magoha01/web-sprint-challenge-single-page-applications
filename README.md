@@ -44,9 +44,9 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 - [X] Create a forked copy of this project
 - [X] Clone your OWN version of the repository (Not Lambda's by mistake!)
-- [ ] Implement the project on the main branch, committing changes regularly
-- [ ] Push commits: `git push origin main`
-- [ ] PUSH EVERYTHING TO THE MAIN BRANCH
+- [X] Implement the project on the main branch, committing changes regularly
+- [X] Push commits: `git push origin main`
+- [X] PUSH EVERYTHING TO THE MAIN BRANCH
 
 ### Task 2: Project Requirements
 

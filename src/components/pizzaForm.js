@@ -1,31 +1,51 @@
 import React from 'react'
 
-export default function PizzaForm(){
 
+
+export default function PizzaForm(props){
+
+    const { values, change, submit, errors } = props
+
+    const onSubmit = event => {
+        event.preventDefault()
+        submit()
+    }
+
+    const onChange = event => {
+        const { value, checked, type, name } = event.target
+        const useValue = type === 'checkbox' ? checked : value;
+        change(name, useValue)
+    }
+                     
+  
     return (
 
         <div className='form-container'>
 
-            <h2>Build Your Own Pizza</h2>
-            <form id = 'pizza-form'>
+            <form id = 'pizza-form' onSubmit={onSubmit}>
+
+                {/* <div>{errors.name}</div> */}
 
                 <label>Order For:
+                <div>{errors.name}</div>
                     <input
                         id='name-input'
                         name='name'
                         type='text'
                         placeholder="Name"
-                        minLength='2'
-                        // value={values.first_name}
-                        // onChange={change}
+                        // minLength='2'
+                        value={values.name}
+                        onChange={onChange}
                     />
                 </label>
+
+                {/* <div>{errors.size}</div> */}
 
                 <label>Size:
                     <select
                         id='size-dropdown'
-                        // onChange={onChange}
-                        // value={values.role}
+                        onChange={onChange}
+                        // value={values.size}
                         name='size'
                     >
                         <option value=''>- Select Size -</option>
@@ -41,8 +61,8 @@ export default function PizzaForm(){
                     <input
                         type='checkbox'
                         name='pepperoni'
-                        // checked={values.hiking}
-                        // onChange={onChange}
+                        // checked={values.checked}
+                        onChange={onChange}
                     />
                 </label>
 
@@ -50,8 +70,8 @@ export default function PizzaForm(){
                 <input
                     type='checkbox'
                     name='sausage'
-                    // checked={values.reading}
-                    // onChange={onChange}
+                    // checked={values.checked}
+                    onChange={onChange}
                 />
                 </label>
 
@@ -59,8 +79,8 @@ export default function PizzaForm(){
                 <input
                     type='checkbox'
                     name='extraCheese'
-                    // checked={values.coding}
-                    // onChange={onChange}
+                    // checked={values.checked}
+                    onChange={onChange}
                 />
                 </label>
 
@@ -68,8 +88,8 @@ export default function PizzaForm(){
                     <input
                         type='checkbox'
                         name='threeCheese'
-                        // checked={values.coding}
-                        // onChange={onChange}
+                        // checked={values.checked}
+                        onChange={onChange}
                     />
                 </label>
 
@@ -78,15 +98,14 @@ export default function PizzaForm(){
                         id='special-text'
                         name='special'
                         type='text'
-                        placeholder="Name"
-                        // minLength='2'
-                        // value={values.first_name}
-                        // onChange={change}
+                        placeholder="Special instructions"
+                        // value={values.special}
+                        onChange={onChange}
                     />
                 </label>
 
             </form>
-            <button id='order-button'>Add to Order</button>
+            <button id='order-button'>Submit Order</button>
         </div>
        
     )
