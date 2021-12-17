@@ -2,8 +2,21 @@ import React, {useState, useEffect} from 'react'
 import * as yup from 'yup'
 import axios from 'axios'
 import schema from '../validation/pizzaSchema';
-
+import styled from 'styled-components'
 import PizzaForm from './pizzaForm'
+
+
+const OrderDiv = styled.div`
+  display: flex;
+  flex-flow: column wrap;
+
+
+  h1{
+    margin: 3% auto;
+font-size: 3rem;
+  }
+
+`
 
 const initialFormValues = {
     name: '',
@@ -78,8 +91,8 @@ const initialFormValues = {
       }, [formValues])
 
       return (
-        <div className='order-container'>
-            <header><h1>Build Your Own Pizza</h1></header>
+        <OrderDiv className='order-container'>
+            <h1>Build Your Own Pizza</h1>
                 <PizzaForm 
                      values={formValues}
                      change={updateForm}
@@ -94,7 +107,7 @@ const initialFormValues = {
     })
   }
               
-        </div>
+        </OrderDiv>
         
     )
   }
