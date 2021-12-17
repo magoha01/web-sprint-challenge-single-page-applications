@@ -35,8 +35,20 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question.
 
 1. In 1-2 sentences, explain what React's `useRouteMatch` hook is used for.
+
+useRouteMatch allows you to add nested routes to your application by using a single parameter (path or url) that may be interpolated to represent the route as opposed to having to type it out completely.
+
+
+
 1. How would you explain form validation to someone who has never programmed before?
+
+Form validation refers to a set of guidelines, called a schema, created for each user input that must be followed by the user in order for their input to be deemed legitimate ( Ex. Checking that the password put in by the user is at least six characters long, making sure all fields have been filled out, etc).
+
+
+
 1. In 1-2 sentences, define end to end testing.
+
+    End to end testing mimics the user experience by having the computer simulate ways the user may interact with an app  (clicks, scrolls, typing, etc), in order to make sure you are getting the expected output.
 
 ## Instructions
 
@@ -56,11 +68,11 @@ Your finished project must include all of the following requirements:
 - [X] A order form that has a "/pizza" route and shows the form
 - [X] A form with an id of "pizza-form"
 - [X] A name text input field with an id of "name-input"
-- [ ] Validation for name and the error message is "name must be at least 2 characters" (Use this exact error message to make sure tests pass) ::: VERY IMPORTANT TO USE THAT EXACT ERROR MESSAGE (casing included!)
+- [X] Validation for name and the error message is "name must be at least 2 characters" (Use this exact error message to make sure tests pass) ::: VERY IMPORTANT TO USE THAT EXACT ERROR MESSAGE (casing included!)
 - [X] A dropdown for pizza size with an id of "size-dropdown"
 - [X] A checklist for toppings - at least 4 (hint: name each separately!)
 - [X] Text input for special instructions with an id of "special-text"
-- [ ] An Add to Order button that has an id of "order-button" and that submits form and returns a database record of name, size, toppings and special instructions
+- [X] An Add to Order button that has an id of "order-button" and that submits form and returns a database record of name, size, toppings and special instructions
 
 Data should look something like
 ```
@@ -81,9 +93,9 @@ there is a key for each of the toppings and they are booleans
 
 Implement the following tests in Cypress:
 
-- [ ] test that you can add text to the box
-- [ ] test that you can select multiple toppings
-- [ ] test that you can submit the form
+- [X] test that you can add text to the box
+- [X] test that you can select multiple toppings
+- [X] test that you can submit the form
 
 In your solution, it is essential that you follow best practices and produce clean and professional results. You will be scored on your adherence to proper code style and good organization. Schedule time to review, refine, and assess your work and perform basic professional polishing including spell-checking and grammar-checking on your work. It is better to submit a challenge that meets MVP than one that attempts too much and does not.
 
