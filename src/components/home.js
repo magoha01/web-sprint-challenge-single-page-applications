@@ -1,5 +1,12 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom';
+import styled from 'styled-components'
+
+const Button = styled.button`
+ margin: 4% 50%;
+  padding: 4% 6%;
+`
+
 
 
 export default function Home(){
@@ -12,18 +19,13 @@ const pizzaRoute = () => {
 
 return (
     <div className='home-container'>
-      <div>
-        <img
-        src="/Assets/Pizza.jpg"
-        alt=''
-      /></div>
       
-      <button
+      <Button
         onClick={pizzaRoute}
         id='order-pizza'
       >
         Order now!
-      </button>
+      </Button>
     </div>
   )
 }
