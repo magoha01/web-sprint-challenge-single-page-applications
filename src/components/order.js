@@ -12,8 +12,11 @@ const OrderDiv = styled.div`
 
 
   h1{
-    margin: 3% auto;
-font-size: 3rem;
+    margin: 2% auto;
+    font-size: 3rem;
+    border: 6px solid purple;
+    border-radius: 12px;
+    padding: 1%;
   }
 
 `
@@ -26,18 +29,25 @@ const initialFormValues = {
     pepperoni: false,
     sausage: false,
     extraCheese: false,
-    threeCheese: false
+    threeCheese: false,
+    mushrooms: false,
+    onions : false,
+    peppers: false,
+    tomatoes: false,
   }
   
   const initialErrors = {
     name: '',
     special: '',
     size: '',
-
     pepperoni: '',
     sausage: '',
     extraCheese: '',
-    threeCheese: ''
+    threeCheese: '',
+    mushrooms: '',
+    onions : '',
+    peppers: '',
+    tomatoes: '',
   }
 
   const initialOrders= [];
@@ -81,7 +91,7 @@ const initialFormValues = {
           name: formValues.name.trim(),
           special: formValues.special.trim(),
           size: formValues.size,
-          toppings: ['pepperoni', 'sausage', 'extraCheese', 'threeCheese'].filter(topping => !!formValues[topping])
+          toppings: ['pepperoni', 'sausage', 'extraCheese', 'threeCheese', 'mushrooms', 'onions', 'peppers', 'tomatoes'].filter(topping => !!formValues[topping])
         }
         postOrder(newOrder);
       }
