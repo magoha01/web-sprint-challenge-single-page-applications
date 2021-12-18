@@ -10,10 +10,12 @@ header{
 h1{
   font-size: 4.5rem;
   margin-top:0;
+  margin-left: 1%;
 }
 
 h3{
   font-size: 3rem;
+  margin-left: 1%;
 }
 #pizzaPic{
   width: 100%;

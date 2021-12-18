@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import styled from 'styled-components'
 
 const Button = styled.button`
- margin: 4% 50%;
+  margin: 4% 50%;
   padding: 4% 6%;
 `
 
