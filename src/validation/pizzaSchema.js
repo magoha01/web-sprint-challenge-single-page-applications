@@ -18,6 +18,10 @@ const pizzaSchema = yup.object().shape({
     sausage: yup.boolean(),
     extraCheese: yup.boolean(),
     threeCheese: yup.boolean(),
+    mushrooms: yup.boolean(),
+    peppers: yup.boolean(),
+    onions: yup.boolean(),
+    tomatoes: yup.boolean(),
 
     special: yup
         .string()
